@@ -121,37 +121,41 @@ items chosen with costs and total costs.
 */
 
 /*
-chooseDrink = "";
-chooseFood = "Burger";
-
+let order = [];
 const coffeeShop = {
-    branch: "Manchester",
-    drinks: {
-        Tea: 2,
-        coffee: 2.50,
-        Hotchocolate: 3
-    },
-    food: {
-        Chips: 1,
-        Burger: 4,
-        Pie: 3
-    },
-    foodOrdered(chooseFood) {
-        let foodSplit = [];
-        foodSplit = this.food.split(",");
-        for (i = 0; foodSplit[i] != chooseFood; i++) {
-            return foodSplit[i];
+        branch: "manchester",
+        drinksWithPrices: {
+            "tea": 1.00,
+            "coffee": 2.00,
+            "chocolate": 3.00},
+            foodWithPrices: {
+                "chips": 1.50,
+                "pie": 3.00,
+                "fish": 3.00,
+                "sausage": 2.50
+            },
+            drinksOrdered(drink1, drink2) {
+                let drinks = Object.keys(this.drinksWithPrices);
+                let drinkValues = Object.values(this.drinksWithPrices);
+                order.push(drinkValues[drinks.indexOf(drink1)]);
+                order.push(drinkValues[drinks.indexOf(drink2)]);
+                return `For drinks you've ordered a ${drink1} and a ${drink2}`;
+            },
+            foodOrdered(food1, food2) {
+                let foods = Object.keys(this.foodWithPrices);
+                let foodValues = Object.values(this.foodWithPrices);
+                order.push(foodValues[foods.indexOf(food1)]);
+                order.push(foodValues[foods.indexOf(food2)]);
+                return `For food you've ordered  ${food1} and ${food2}`;
+            }
         }
-    }
+        console.log(coffeeShop.drinksOrdered("tea", "chocolate"));
+        console.log(coffeeShop.foodOrdered("pie", "chips"));
+        let total = 0;
+        for (i = 0; i < order.length; i++) {
+            total += order[i];
+        }
 
-};
 
-
-//drinksOrdered(){}
-
-
-//console.log(coffeeShop.food["Chips"]);
-
+        console.log(`Your total comes to £${total}.`);
 */
-
-
