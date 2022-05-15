@@ -190,3 +190,70 @@ let coffeeOrder = [
     
     console.log(coffeeOrder.length);
     */
+
+    /*
+    //Take items in a string and seperate them into an array
+
+let drinks = "tea, coffee, lemoande, water";
+console.log(drinks);
+//Prints - tea, coffee, lemoande, water
+
+let splitDrinks = drinks.split(",");
+console.log(splitDrinks);
+//Prints - [ 'tea', ' coffee', ' lemoande', ' water' ]
+*/
+
+/*
+//Declaring variables
+const coffeeShop = {
+  branch: "Manchester",
+
+  drinks: {
+    americano: 2,
+    latte: 2.5,
+    espresso: 1.5,
+    capuccino: 3,
+  },
+
+  food: {
+    cookie: 1.5,
+    muffin: 2,
+    sandwich: 3,
+  },
+
+  //Function which creates a new array, using the ... spread operator, and functionality to connect the drinks order and cost.
+  drinksOrdered(...drinks) {
+    let cost = 0;
+    const drinksStr = drinks.join(" & ");
+    drinks.forEach((drink) => (cost += this.drinks[drink]));
+    cost = cost.toString().split(".");
+    cost[1] = cost[1].padEnd(2, "0");
+    cost = cost.join(".");
+
+    return this.displayOrder(drinksStr, cost);
+  },
+ //function which again creates a new array and functionality to connect the order and cost.
+  foodOrdered(...food) {
+    let cost = 0;
+    const foodStr = food.join(" & ");
+
+    food.forEach((item) => (cost += this.food[item]));
+
+    cost = cost.toString().split(".");
+    cost[1] = cost[1].padEnd(2, "0");
+    cost = cost.join(".");
+
+    return this.displayOrder(foodStr, cost);
+  },
+
+  //function to create a string to inject the variables using template literals. 
+  displayOrder(order, cost) {
+    return console.log(
+      `Your ${order} will be with you shortly, the total is £${cost}.`
+    );
+  },
+};
+
+coffeeShop.drinksOrdered("capuccino", "espresso");
+coffeeShop.foodOrdered("cookie", "muffin");
+*/

@@ -245,3 +245,55 @@ else {
     console.log(multi);
   }
 */
+
+//-----Practice-----
+//Eight ball
+
+/*
+// Ternary expression used to replace if else
+// If user name isn't entered, print Hello!
+let userName = "Gareth";
+userName ? console.log(`Hello ${userName}!`) : console.log("Hello!");
+
+// Ask the eight ball a question
+console.log("Ask the Eight ball a question")
+const userQuestion = "Will I win the lottery?"
+console.log(userQuestion);
+
+//Math.random() returns a value between 0 and 1
+//In order to make this set of numbers range from 0 to 8 we can multiply the returned value by 8.
+//To ensure we only have whole numbers from 0 to 7 we round down using Math.floor().
+randomNumber = Math.floor(Math.random() * 8);
+
+// Set eight ball to empty string
+let eightBall = "";
+
+// Assign strings to numbers 0-7 and pass them to the eight ball 
+switch(randomNumber) {
+  case 0: 
+  eightBall = "It is certain";
+  break;
+  case 1:
+  eightBall = "It is decidedly so";
+  break;
+  case 2: 
+  eightBall = "Reply hazy try again";
+  break;
+  case 3:
+  eightBall = "Cannot predict now";
+  break;
+  case 4:
+  eightBall = "Do not count on it";
+  break;
+  case 5:
+  eightBall = "My sources say no";
+  break;
+  case 6:
+  eightBall = "Outlook not so good";
+  break;
+  case 7:
+  eightBall = "Signs point to yes";
+  break;
+}
+ console.log(eightBall);
+*/
