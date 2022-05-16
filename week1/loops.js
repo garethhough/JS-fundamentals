@@ -171,3 +171,19 @@ for (let i = 0; i < 5; i++) {
     console.log(i);
   };
 */
+
+
+
+//-----Reverse string using loop-----
+/*
+reverseString('hello');
+
+function reverseString(str) {
+    let newString = "";
+    for (let i = str.length - 1; i >= 0; i--) { 
+        newString += str[i];
+    };
+    console.log(newString);
+    return;
+};
+*/
